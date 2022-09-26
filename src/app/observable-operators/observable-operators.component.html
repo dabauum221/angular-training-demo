@@ -1,0 +1,23 @@
+<h3>Select a continent:</h3>
+<div>
+  <select [formControl]="continentSelect">
+    <option>Antarctica</option>
+    <option>Africa</option>
+    <option>Asia</option>
+    <option>Europe</option>
+    <option>North America</option>
+    <option>South America</option>
+    <option>Oceania</option>
+  </select>
+</div>
+
+<h3>Select a country:</h3>
+<div>
+  <select [formControl]="countrySelect">
+    <option *ngFor="let country of displayedCountries">{{country.name}}</option>
+  </select>
+</div>
+
+<p>
+  You selected: {{currentSelection}}
+</p>

@@ -1,0 +1,10 @@
+div {
+  border: 2px solid black;
+  background-color: #eeeeee;
+  padding: 10px;
+  margin: 5px;
+}
+
+button {
+  margin: 5px;
+}

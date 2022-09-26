@@ -1,0 +1,7 @@
+<p>
+  <input type="text" [(ngModel)]="name" />
+  <button (click)="alertName()">Click me</button>
+</p>
+<p [style.backgroundColor]="name">
+  {{name}}
+</p>
