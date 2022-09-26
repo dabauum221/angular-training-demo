@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <div [ngSwitch]="page">
       <p *ngSwitchCase="1">Viewing content of first page</p>
       <p *ngSwitchCase="2">Viewing content of second page</p>
-      <p *ngSwitchCase="3">Viewing content of third page</p>
+      <app-hiding *ngSwitchCase="3">Viewing content of third page</app-hiding>
       <p *ngSwitchDefault>No page selected</p>
     </div>
     <div>
@@ -14,10 +14,8 @@ import { Component } from '@angular/core';
       <button (click)="page = 2">Page 2</button>
       <button (click)="page = 3">Page 3</button>
     </div>
-  `
+  `,
 })
 export class NgSwitchComponent {
-
   page = null;
-
 }
