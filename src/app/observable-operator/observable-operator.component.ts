@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-observable-operator',
@@ -15,7 +15,10 @@ export class ObservableOperatorComponent implements OnDestroy {
 
   constructor() {
     this.subscription = this.continentSelect.valueChanges
-      .pipe(map((continent) => continent.toUpperCase().slice(0, 3)))
+      .pipe(
+        tap((data) => console.log(data)),
+        map((continent) => continent.toUpperCase().slice(0, 3))
+      )
       .subscribe((newValue) => {
         this.currentSelection = newValue;
       });
