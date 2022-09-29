@@ -17,7 +17,8 @@ export class ObservableOperatorComponent implements OnDestroy {
     this.subscription = this.continentSelect.valueChanges
       .pipe(
         tap((data) => console.log(data)),
-        map((continent) => continent.toUpperCase().slice(0, 3))
+        map((continent) => continent.toUpperCase().slice(0, 3)),
+        tap((data) => console.log(data))
       )
       .subscribe((newValue) => {
         this.currentSelection = newValue;
