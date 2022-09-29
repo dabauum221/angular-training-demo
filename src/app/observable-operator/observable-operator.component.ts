@@ -15,12 +15,11 @@ export class ObservableOperatorComponent implements OnDestroy {
   content$: Observable<string>;
 
   constructor() {
-    this.content$ = this.continentSelect.valueChanges
-      .pipe(
-        tap((data) => console.log(data)),
-        map((continent) => continent.toUpperCase().slice(0, 3)),
-        tap((data) => console.log(data))
-      );
+    this.content$ = this.continentSelect.valueChanges.pipe(
+      tap((data) => (this.currentSelection = data)),
+      map((continent) => continent.toUpperCase().slice(0, 3)),
+      tap((data) => console.log(data))
+    );
   }
 
   ngOnDestroy() {
