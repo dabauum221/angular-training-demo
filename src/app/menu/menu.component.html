@@ -1,13 +1,14 @@
 <div style="text-align:center">
-  <h1>
-    Demos
-  </h1>
+  <h1>Demos</h1>
 </div>
 <ul>
   <li>
-    <h3>Bindings: <a rel="noopener" routerLink="bindings">Bindings example</a> -
+    <h3>
+      Bindings: <a rel="noopener" routerLink="bindings">Bindings example</a> -
       <a rel="noopener" routerLink="ngmodel">ngModel example</a> -
-      <a rel="noopener" routerLink="2-way-data-binding">Custom two-way data binding</a>
+      <a rel="noopener" routerLink="2-way-data-binding"
+        >Custom two-way data binding</a
+      >
     </h3>
     <button (click)="showDialog = true">Show dialog</button>
     <app-dialog
@@ -16,26 +17,32 @@
       (onClose)="dialogClosed($event)"
     >
       This is the content of the dialog
+      <div>A div</div>
+      <app-hiding></app-hiding>
+      <button>OK</button>
     </app-dialog>
   </li>
   <li>
-    <h3>Directive examples: <a rel="noopener" routerLink="ngfor">*ngFor</a> -
+    <h3>
+      Directive examples: <a rel="noopener" routerLink="ngfor">*ngFor</a> -
       <a rel="noopener" routerLink="ngif">*ngIf</a> -
       <a rel="noopener" routerLink="ngclass">ngClass</a> -
       <a rel="noopener" routerLink="ngswitch">*ngSwitch</a>
     </h3>
   </li>
   <li>
-    <h3>RxJs basics:
+    <h3>
+      RxJs basics:
       <a rel="noopener" routerLink="observable-subscribe">Subscribe</a> -
       <a rel="noopener" routerLink="observable-unsubscribe">Unsubscribe</a>
     </h3>
   </li>
   <li>
-    <h3>RxJs advanced:
+    <h3>
+      RxJs advanced:
       <a rel="noopener" routerLink="observable-operator">One Operator</a> -
-      <a rel="noopener" routerLink="observable-operators">Several Operators</a> -
-      <a rel="noopener" routerLink="observable-example">Observable</a> -
+      <a rel="noopener" routerLink="observable-operators">Several Operators</a>
+      - <a rel="noopener" routerLink="observable-example">Observable</a> -
       <a rel="noopener" routerLink="list-posts">Social media posts</a> -
       <a rel="noopener" routerLink="subject-example">Subject</a> -
       <a rel="noopener" routerLink="promise-example">Promise</a>-
@@ -43,7 +50,11 @@
     </h3>
   </li>
   <li>
-    <h3>Forms: <a rel="noopener" routerLink="template-driven-form">Template driven</a> - <a rel="noopener" routerLink="reactive-form">Reactive</a></h3>
+    <h3>
+      Forms:
+      <a rel="noopener" routerLink="template-driven-form">Template driven</a> -
+      <a rel="noopener" routerLink="reactive-form">Reactive</a>
+    </h3>
   </li>
   <li>
     <h3>UI: <a rel="noopener" routerLink="spinner">Spinner component</a></h3>
