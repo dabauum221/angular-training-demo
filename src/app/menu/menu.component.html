@@ -19,7 +19,7 @@
       This is the content of the dialog
       <div>A div</div>
       <app-hiding></app-hiding>
-      <button>OK</button>
+      <button (click)="dialogClosed($event)">OK</button>
     </app-dialog>
   </li>
   <li>
